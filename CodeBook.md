@@ -1,6 +1,6 @@
 <b>CODE BOOK FOR TIDY DATA PROJECT TO CREATE SCRIPT “run_analysis.R”  </b> 
 
-<u>Variables</u>
+<b>Variables</b>
 
 tempdata1 – used to temporarily store “x” data
 tempdata2 – used to temporarily store “y” data
@@ -24,7 +24,7 @@ colcount – used to store number of columns
 tidyfile – used to store the tidy data
  
 
-<u>Data</u>
+<b>Data</b>
 
 Data for this project was obtained from:
  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -32,7 +32,7 @@ Data for this project was obtained from:
 The zip file contains a “README.txt” file that describes the data in detail.
 
 
-<u>Transformations and Work Performed by Script to Clean Data</u>
+<b>Transformations and Work Performed by Script to Clean Data</b>
 
 The script takes the combines the X, Y and Subject data for each of the two databases, “train” and “test” into a single database for each.  These two databases are then combined using rbind, into a single datafile.
 
