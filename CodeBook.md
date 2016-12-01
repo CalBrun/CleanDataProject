@@ -1,27 +1,27 @@
-CODE BOOK FOR TIDY DATA PROJECT TO CREATE SCRIPT “run_analysis.R”   
+<b>CODE BOOK FOR TIDY DATA PROJECT TO CREATE SCRIPT â€œrun_analysis.Râ€  </b> 
 
 Variables
 
-tempdata1 – used to temporarily store “x” data
-tempdata2 – used to temporarily store “y” data
-tempdata3 – used to temporarily store “subject” data
+tempdata1 â€“ used to temporarily store â€œxâ€ data
+tempdata2 â€“ used to temporarily store â€œyâ€ data
+tempdata3 â€“ used to temporarily store â€œsubjectâ€ data
 
-datatrain – used to combine “x”, “y” and “subject data from the Training data in a single table
-datatest - used to combine “x”, “y” and “subject data from the Test data in a single table
+datatrain â€“ used to combine â€œxâ€, â€œyâ€ and â€œsubject data from the Training data in a single table
+datatest - used to combine â€œxâ€, â€œyâ€ and â€œsubject data from the Test data in a single table
 
-features – used to store the features for the data set
-rowcount – used to store the number of rows
-featurelist – list of descriptions for data elements in the table
+features â€“ used to store the features for the data set
+rowcount â€“ used to store the number of rows
+featurelist â€“ list of descriptions for data elements in the table
 
-meanstd – contains a vector indicating if column names contain either “mean” or “std”
-datafile – the datafile that contains the subject, activity and “mean” or “std” columns
+meanstd â€“ contains a vector indicating if column names contain either â€œmeanâ€ or â€œstdâ€
+datafile â€“ the datafile that contains the subject, activity and â€œmeanâ€ or â€œstdâ€ columns
 
-activities – activity labels
-row – used as an incremented variable 
-x – used to temporarily store the number associated with an activity
+activities â€“ activity labels
+row â€“ used as an incremented variable 
+x â€“ used to temporarily store the number associated with an activity
 
-colcount – used to store number of columns
-tidyfile – used to store the tidy data
+colcount â€“ used to store number of columns
+tidyfile â€“ used to store the tidy data
  
 
 Data
@@ -29,16 +29,16 @@ Data
 Data for this project was obtained from:
  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The zip file contains a “README.txt” file that describes the data in detail.
+The zip file contains a â€œREADME.txtâ€ file that describes the data in detail.
 
 
 Transformations and Work Performed by Script to Clean Data
 
-The script takes the combines the X, Y and Subject data for each of the two databases, “train” and “test” into a single database for each.  These two databases are then combined using rbind, into a single datafile.
+The script takes the combines the X, Y and Subject data for each of the two databases, â€œtrainâ€ and â€œtestâ€ into a single database for each.  These two databases are then combined using rbind, into a single datafile.
 
-The column names of the data files are modified to reflect that the first two columns are subject, and activity.  The name of each of the data elements are then added from the “feature.txt” file.
+The column names of the data files are modified to reflect that the first two columns are subject, and activity.  The name of each of the data elements are then added from the â€œfeature.txtâ€ file.
 
-A datafile is created by subsettung only the columns having features incorporating either “mean” or “std” within their names, representing means and standard deviations.
+A datafile is created by subsettung only the columns having features incorporating either â€œmeanâ€ or â€œstdâ€ within their names, representing means and standard deviations.
 
 Activities from the activity_labels.txt file are then added to each of the rows in the second column of the file, by replacing the corresponding activity number in the column with the activity label.
 
